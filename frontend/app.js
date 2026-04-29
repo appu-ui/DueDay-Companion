@@ -10,6 +10,8 @@ const calendarStatus = document.querySelector("#calendarStatus");
 const connectCalendarButton = document.querySelector("#connectCalendarButton");
 const addCalendarButton = document.querySelector("#addCalendarButton");
 const productsGrid = document.querySelector("#productsGrid");
+const blueprintGrid = document.querySelector("#blueprintGrid");
+const dailyBlueprintSection = document.querySelector("#dailyBlueprintSection");
 const timelineGrid = document.querySelector("#timelineGrid");
 const fullTimelineGrid = document.querySelector("#fullTimelineGrid");
 const fullTimelineSection = document.querySelector("#fullTimelineSection");
@@ -65,6 +67,34 @@ function renderProducts(products) {
           <a class="shop-link" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">
             View on Mumzworld
           </a>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderBlueprint(blueprint) {
+  if (!blueprint) {
+    dailyBlueprintSection.style.display = "none";
+    return;
+  }
+
+  dailyBlueprintSection.style.display = "";
+  const timesOfDay = [
+    { key: "morning", label: "Morning" },
+    { key: "afternoon", label: "Afternoon" },
+    { key: "night", label: "Night" }
+  ];
+
+  blueprintGrid.innerHTML = timesOfDay
+    .map(({ key, label }) => {
+      const data = blueprint[key];
+      if (!data) return "";
+      return `
+        <article class="blueprint-card">
+          <h4>${escapeHtml(label)}</h4>
+          <p lang="en">${escapeHtml(data.en)}</p>
+          <p lang="ar" dir="rtl">${escapeHtml(data.ar)}</p>
         </article>
       `;
     })
@@ -131,6 +161,7 @@ function renderPlan(data) {
   uncertaintyNote.textContent = data.uncertainty_note || "";
   calendarAdvice.textContent = data.calendar_advice || "No calendar advice returned.";
   addCalendarButton.disabled = latestCalendarEvents.length === 0;
+  renderBlueprint(data.daily_blueprint || null);
   renderProducts(data.products || []);
   renderTimeline(data.next_2_weeks_preview || [], data.milestones || []);
   renderFullTimeline(data.full_timeline || null);

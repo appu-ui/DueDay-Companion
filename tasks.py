@@ -67,9 +67,11 @@ reasoning_task = Task(
         "Requirements:\n"
         "1. Reasons must be stage-aware and specific to the current week\n"
         "2. Provide English and Arabic for each product\n"
-        "3. Keep each reason concise and practical\n\n"
+        "3. Keep each reason concise and practical\n"
+        "4. Generate a 'daily_blueprint' breaking down the day into Morning, Afternoon, and Night using a 'Real Talk' tone mapping symptoms to products.\n"
+        "5. For next_2_weeks_preview and milestones, make the focus/event highly informative (2-3 sentences in English / Arabic), mentioning specific physical changes and exactly why to prepare. Ensure the 'buy' list is populated with 2-3 specific items.\n\n"
         "Return ONLY valid JSON in this format:\n"
-        '{"current_focus": "... / ...", "products": [{"name": "...", "reason": {"en": "...", "ar": "..."}, "timing": "..."}], "next_2_weeks_preview": [{"week": 25, "focus": "... / ...", "buy": ["..."]}], "milestones": [{"week": 28, "event": "... / ..."}], "full_timeline": []}'
+        '{"current_focus": "... / ...", "daily_blueprint": {"morning": {"en": "...", "ar": "..."}, "afternoon": {"en": "...", "ar": "..."}, "night": {"en": "...", "ar": "..."}}, "products": [{"name": "...", "reason": {"en": "...", "ar": "..."}, "timing": "..."}], "next_2_weeks_preview": [{"week": 25, "focus": "... / ...", "buy": ["..."]}], "milestones": [{"week": 28, "event": "... / ..."}], "full_timeline": []}'
     ),
     expected_output="A JSON object with enriched product reasoning and preview content.",
     agent=reasoning_agent,
@@ -125,7 +127,8 @@ output_task = Task(
         '"calendar_advice": "... / ...", '
         '"confidence": 0.84, '
         '"uncertainty_note": "...", '
-        '"full_timeline": []'
+        '"full_timeline": [], '
+        '"daily_blueprint": {"morning": {"en": "...", "ar": "..."}, "afternoon": {"en": "...", "ar": "..."}, "night": {"en": "...", "ar": "..."}}'
         '}'
     ),
     expected_output="A final JSON object matching the response schema.",

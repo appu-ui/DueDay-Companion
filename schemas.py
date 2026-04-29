@@ -25,9 +25,20 @@ class PregnancyPlanRequest(BaseModel):
         return normalized
 
 
+class BilingualText(BaseModel):
+    en: str
+    ar: str
+
+
 class ProductReason(BaseModel):
     en: str
     ar: str
+
+
+class DailyBlueprint(BaseModel):
+    morning: BilingualText
+    afternoon: BilingualText
+    night: BilingualText
 
 
 class ProductItem(BaseModel):
@@ -70,6 +81,7 @@ class PregnancyPlanOutput(BaseModel):
     confidence: float = Field(..., ge=0.0, le=1.0)
     uncertainty_note: str
     full_timeline: Optional[List[PreviewItem]] = None
+    daily_blueprint: Optional[DailyBlueprint] = None
     debug: Optional[Dict[str, Any]] = None
 
 
@@ -84,4 +96,5 @@ SAFE_FALLBACK = PregnancyPlanOutput(
     confidence=0.0,
     uncertainty_note="Please verify the due date and consult your doctor if you are unsure. / يرجى التحقق من موعد الولادة واستشارة الطبيب عند عدم التأكد.",
     full_timeline=None,
+    daily_blueprint=None,
 )

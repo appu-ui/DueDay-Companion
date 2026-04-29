@@ -18,6 +18,13 @@
         "timing": "Buy now",
         "base_reason_en": "Helps maintain consistent hydration during early nausea.",
         "base_reason_ar": "يساعد على الحفاظ على الترطيب المنتظم مع الغثيان المبكر."
+      },
+      {
+        "name": "Ginger tea",
+        "url": "https://www.mumzworld.com/en/search?q=Ginger+tea",
+        "timing": "Buy now",
+        "base_reason_en": "Natural, safe relief for early pregnancy nausea and digestive discomfort.",
+        "base_reason_ar": "راحة طبيعية وآمنة لغثيان الحمل المبكر ومشاكل الهضم."
       }
     ]
   },
@@ -40,6 +47,13 @@
         "timing": "Buy now",
         "base_reason_en": "Track symptoms, appointments, and memories from the very start.",
         "base_reason_ar": "تتبعي الأعراض والمواعيد والذكريات من البداية."
+      },
+      {
+        "name": "Pregnancy guide books",
+        "url": "https://www.mumzworld.com/en/search?q=Pregnancy+books",
+        "timing": "Buy now",
+        "base_reason_en": "Empower yourself with knowledge about the journey ahead.",
+        "base_reason_ar": "عززي معرفتك حول رحلة الحمل القادمة."
       }
     ]
   },
@@ -62,6 +76,13 @@
         "timing": "Buy now",
         "base_reason_en": "Early and consistent use helps maintain skin elasticity as the bump grows.",
         "base_reason_ar": "الاستخدام المبكر والمنتظم يساعد في الحفاظ على مرونة الجلد مع نمو البطن."
+      },
+      {
+        "name": "Maternity leggings",
+        "url": "https://www.mumzworld.com/en/search?q=Maternity+leggings",
+        "timing": "Buy now",
+        "base_reason_en": "Essential for daily comfort as your waistline begins to expand.",
+        "base_reason_ar": "ضرورية للراحة اليومية مع بدء توسع محيط الخصر."
       }
     ]
   },
@@ -84,6 +105,13 @@
         "timing": "Optional",
         "base_reason_en": "The anatomy scan may reveal gender — a fun time to start thinking about names.",
         "base_reason_ar": "فحص التشريح قد يكشف الجنس — وقت ممتع لبدء التفكير بالأسماء."
+      },
+      {
+        "name": "Pregnancy-safe skincare",
+        "url": "https://www.mumzworld.com/en/search?q=Pregnancy+safe+skincare",
+        "timing": "Buy now",
+        "base_reason_en": "Hormones can change your skin; switch to gentle, pregnancy-safe alternatives.",
+        "base_reason_ar": "الهرمونات قد تغير بشرتك؛ انتقلي لبدائل لطيفة وآمنة للحمل."
       }
     ]
   },
@@ -106,6 +134,13 @@
         "timing": "Buy now",
         "base_reason_en": "Relieves lower back pressure as the belly weight increases noticeably.",
         "base_reason_ar": "يخفف ضغط أسفل الظهر مع زيادة وزن البطن بشكل ملحوظ."
+      },
+      {
+        "name": "Pregnancy wedge pillow",
+        "url": "https://www.mumzworld.com/en/search?q=Pregnancy+wedge",
+        "timing": "Buy now",
+        "base_reason_en": "A smaller, portable pillow to support your bump while sitting or sleeping.",
+        "base_reason_ar": "وسادة صغيرة لدعم البطن أثناء الجلوس أو النوم."
       }
     ]
   },
@@ -128,6 +163,13 @@
         "timing": "Buy now",
         "base_reason_en": "Keeps daily movement comfortable as the abdomen expands rapidly.",
         "base_reason_ar": "يجعل الحركة اليومية مريحة مع اتساع البطن السريع."
+      },
+      {
+        "name": "Pregnancy bath salts",
+        "url": "https://www.mumzworld.com/en/search?q=Epsom+salt+bath",
+        "timing": "Buy now",
+        "base_reason_en": "Magnesium-rich salts safely soothe aching muscles and leg cramps.",
+        "base_reason_ar": "أملاح الاستحمام لتهدئة العضلات المتعبة وتشنجات الساقين بأمان."
       }
     ]
   },
@@ -150,6 +192,13 @@
         "timing": "Buy now",
         "base_reason_en": "Stock up early to avoid last-minute shopping stress closer to delivery.",
         "base_reason_ar": "تخزين مبكر لتجنب ضغط الشراء في اللحظات الأخيرة قرب الولادة."
+      },
+      {
+        "name": "Nursery organizers",
+        "url": "https://www.mumzworld.com/en/search?q=Nursery+organizer",
+        "timing": "Buy now",
+        "base_reason_en": "Capitalize on your nesting instincts by organizing the baby's room.",
+        "base_reason_ar": "استفيدي من غريزة التعشيش بتنظيم غرفة الطفل."
       }
     ]
   },
@@ -172,6 +221,13 @@
         "timing": "Buy this stage",
         "base_reason_en": "Test and set up the monitor in the nursery before the baby arrives.",
         "base_reason_ar": "جربي وجهزي جهاز المراقبة في غرفة الطفل قبل وصوله."
+      },
+      {
+        "name": "Baby bath tub",
+        "url": "https://www.mumzworld.com/en/search?q=Baby+bath+tub",
+        "timing": "Buy now",
+        "base_reason_en": "An essential item for safely bathing your newborn from day one.",
+        "base_reason_ar": "عنصر أساسي لاستحمام مولودك بأمان منذ اليوم الأول."
       }
     ]
   },
@@ -194,6 +250,13 @@
         "timing": "Buy this stage",
         "base_reason_en": "Have it ready in advance so you're not deciding under time pressure after birth.",
         "base_reason_ar": "جهزيه مسبقاً حتى لا تتخذي القرار تحت ضغط الوقت بعد الولادة."
+      },
+      {
+        "name": "Nursing bras",
+        "url": "https://www.mumzworld.com/en/search?q=Nursing+bras",
+        "timing": "Buy now",
+        "base_reason_en": "Size up for comfort and easy access as you approach the final weeks.",
+        "base_reason_ar": "اختاري مقاساً أكبر للراحة وسهولة الوصول مع اقتراب الأسابيع الأخيرة."
       }
     ]
   },
@@ -216,6 +279,13 @@
         "timing": "Buy now",
         "base_reason_en": "Swaddling helps newborns feel secure — have a few ready before delivery.",
         "base_reason_ar": "التقميط يساعد المولود على الشعور بالأمان — جهزي بعضها قبل الولادة."
+      },
+      {
+        "name": "Bottle sterilizer",
+        "url": "https://www.mumzworld.com/en/search?q=Bottle+sterilizer",
+        "timing": "Buy now",
+        "base_reason_en": "A huge time-saver for keeping feeding equipment hygienic and safe.",
+        "base_reason_ar": "يوفر الكثير من الوقت للحفاظ على نظافة معدات الرضاعة."
       }
     ]
   },
@@ -238,6 +308,13 @@
         "timing": "Buy now",
         "base_reason_en": "Colostrum may start leaking — nursing pads keep you comfortable and prepared.",
         "base_reason_ar": "قد يبدأ اللبأ بالتسرب — وسادات الرضاعة تبقيك مرتاحة ومستعدة."
+      },
+      {
+        "name": "Perineal spray",
+        "url": "https://www.mumzworld.com/en/search?q=Perineal+spray",
+        "timing": "Buy now",
+        "base_reason_en": "Provides instant cooling relief during those early postpartum days.",
+        "base_reason_ar": "يوفر راحة فورية في الأيام الأولى بعد الولادة."
       }
     ]
   },
@@ -260,6 +337,13 @@
         "timing": "Buy now",
         "base_reason_en": "Essential for hospital discharge and the first car ride home.",
         "base_reason_ar": "ضروري للخروج من المستشفى وأول رحلة بالسيارة إلى المنزل."
+      },
+      {
+        "name": "Maternity pads",
+        "url": "https://www.mumzworld.com/en/search?q=Maternity+pads",
+        "timing": "Buy now",
+        "base_reason_en": "Highly absorbent pads are crucial for the weeks following childbirth.",
+        "base_reason_ar": "فوط عالية الامتصاص ضرورية للأسابيع التي تلي الولادة."
       }
     ]
   },
@@ -282,6 +366,13 @@
         "timing": "Have ready",
         "base_reason_en": "Nail clippers, thermometer, nasal aspirator — small items you'll need immediately.",
         "base_reason_ar": "مقص أظافر، ميزان حرارة، شفاط أنف — أغراض صغيرة ستحتاجينها فوراً."
+      },
+      {
+        "name": "White noise machine",
+        "url": "https://www.mumzworld.com/en/search?q=White+noise+machine",
+        "timing": "Have ready",
+        "base_reason_en": "Mimics the sounds of the womb to help soothe your newborn to sleep.",
+        "base_reason_ar": "يحاكي أصوات الرحم لمساعدة مولودك الجديد على النوم بسلام."
       }
     ]
   }
