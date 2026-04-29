@@ -22,6 +22,11 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 REDIRECT_URI = os.getenv("GOOGLE_CALENDAR_REDIRECT_URI", "http://127.0.0.1:8000/google-calendar/callback")
 os.environ.setdefault("OAUTHLIB_INSECURE_TRANSPORT", "1")
 
+# If credentials.json doesn't exist but GOOGLE_CREDENTIALS_JSON env var is set,
+# create the file at runtime (for cloud deployments like Render).
+if not CLIENT_SECRET_PATH.exists() and os.getenv("GOOGLE_CREDENTIALS_JSON"):
+    CLIENT_SECRET_PATH.write_text(os.getenv("GOOGLE_CREDENTIALS_JSON"), encoding="utf-8")
+
 
 def is_configured() -> bool:
     return CLIENT_SECRET_PATH.exists()
