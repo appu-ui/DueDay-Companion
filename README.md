@@ -3,6 +3,16 @@
 A multi-agent AI system powered by CrewAI and LLaMA 3.3 that analyzes pregnancy timelines to output structured, safe, bilingual (English + Arabic) insights along with relevant, stage-aware product recommendations for Mumzworld.
 
 🔗 **Live Demo**: [https://dueday-companion.onrender.com](https://dueday-companion.onrender.com)
+🎥 **Walkthrough Video**: [Watch on Loom](https://www.loom.com/share/2200e4509f7e4ab58b839674195b083c)
+---
+
+## The Problem & The Solution
+
+**The Problem:** 
+During pregnancy, expecting parents are bombarded with generic, conflicting, and often anxiety-inducing advice online. When shopping for pregnancy essentials, they rarely know exactly *what* they need or *when* they need it. There is a massive gap between clinical medical advice and practical, week-by-week retail guidance.
+
+**The Solution:** 
+DueDay Companion bridges this gap. It is a strict, non-medical AI companion that takes a simple due date and generates a safe, highly personalized weekly plan. It tells parents exactly what products they need *right now* for their specific stage of pregnancy, explains *why* they need them, and does so in both English and Arabic.
 
 ---
 
