@@ -11,6 +11,8 @@ const connectCalendarButton = document.querySelector("#connectCalendarButton");
 const addCalendarButton = document.querySelector("#addCalendarButton");
 const productsGrid = document.querySelector("#productsGrid");
 const timelineGrid = document.querySelector("#timelineGrid");
+const fullTimelineGrid = document.querySelector("#fullTimelineGrid");
+const fullTimelineSection = document.querySelector("#fullTimelineSection");
 let latestCalendarEvents = [];
 let calendarConnected = false;
 
@@ -97,6 +99,25 @@ function renderTimeline(preview, milestones) {
     .join("");
 }
 
+function renderFullTimeline(fullTimeline) {
+  if (!fullTimeline || !fullTimeline.length) {
+    fullTimelineSection.style.display = "none";
+    return;
+  }
+
+  fullTimelineSection.style.display = "";
+  fullTimelineGrid.innerHTML = fullTimeline
+    .map(
+      (item) => `
+        <article class="timeline-item">
+          <strong>${escapeHtml(`Week ${item.week}`)}</strong>
+          <p>${escapeHtml(item.focus)}${item.buy?.length ? `<br>Buy: ${escapeHtml(item.buy.join(", "))}` : ""}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function renderPlan(data) {
   latestCalendarEvents = data.calendar_events || [];
   currentWeek.textContent = data.current_week ?? "--";
@@ -111,6 +132,7 @@ function renderPlan(data) {
   addCalendarButton.disabled = !calendarConnected || latestCalendarEvents.length === 0;
   renderProducts(data.products || []);
   renderTimeline(data.next_2_weeks_preview || [], data.milestones || []);
+  renderFullTimeline(data.full_timeline || null);
 }
 
 async function refreshCalendarStatus() {
