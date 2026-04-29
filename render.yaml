@@ -10,8 +10,7 @@ services:
         value: 3.11.9
       - key: GROQ_API_KEY
         sync: false
-      - key: GEMINI_API_KEY
-        sync: false
+
       - key: PREGNANCY_LLM_MODEL
         value: groq/llama-3.3-70b-versatile
       - key: GOOGLE_CALENDAR_REDIRECT_URI

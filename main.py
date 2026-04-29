@@ -142,7 +142,7 @@ def create_google_calendar_events(payload: GoogleCalendarCreateRequest) -> dict:
 def health_check() -> dict:
     return {
         "status": "healthy",
-        "llm_configured": bool(os.getenv("GROQ_API_KEY") or os.getenv("GEMINI_API_KEY")),
+        "llm_configured": bool(os.getenv("GROQ_API_KEY")),
         "google_calendar_configured": google_calendar.is_configured(),
         "version": "2.0.0",
         "system": "pregnancy_product_intelligence",
