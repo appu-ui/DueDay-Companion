@@ -1,0 +1,66 @@
+[
+  {
+    "id": "TC-001",
+    "name": "Normal case",
+    "input": {
+      "due_date": "2026-08-15",
+      "mode": "focused"
+    },
+    "expected": {
+      "min_confidence": 0.6,
+      "allow_products": true
+    }
+  },
+  {
+    "id": "TC-002",
+    "name": "Invalid date",
+    "input": {
+      "due_date": "15-08-2026",
+      "mode": "focused"
+    },
+    "expected": {
+      "current_week": 0,
+      "confidence_max": 0.1,
+      "products_empty": true
+    }
+  },
+  {
+    "id": "TC-003",
+    "name": "Past due date",
+    "input": {
+      "due_date": "2025-01-10",
+      "mode": "focused"
+    },
+    "expected": {
+      "current_week": 0,
+      "confidence_max": 0.1,
+      "products_empty": true
+    }
+  },
+  {
+    "id": "TC-004",
+    "name": "Missing input",
+    "input": {
+      "due_date": "",
+      "mode": "focused"
+    },
+    "expected": {
+      "current_week": 0,
+      "confidence_max": 0.1,
+      "products_empty": true
+    }
+  },
+  {
+    "id": "TC-005",
+    "name": "Far future edge case",
+    "input": {
+      "due_date": "2027-12-31",
+      "mode": "focused"
+    },
+    "expected": {
+      "current_week": 0,
+      "confidence_max": 0.1,
+      "products_empty": true
+    }
+  }
+]

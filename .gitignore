@@ -1,0 +1,36 @@
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables & secrets
+.env
+.env.*
+credentials.json
+google_calendar_token.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+uvicorn.log
+uvicorn.err.log
+uvicorn.out.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Response cache
+response.json

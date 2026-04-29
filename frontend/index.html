@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DueDay Companion Pregnancy Planner</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">m</div>
+        <div>
+          <p class="eyebrow">Mumz-style pregnancy care</p>
+          <h1>DueDay Companion</h1>
+        </div>
+      </div>
+      <nav class="nav-pills" aria-label="Planner sections">
+        <a href="#plan">Plan</a>
+        <a href="#products">Products</a>
+        <a href="#calendar">Calendar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="planner-shell" id="plan">
+        <div class="planner-copy">
+          <p class="eyebrow">Mother, baby, and bump essentials</p>
+          <h2>Week-aware pregnancy shopping and milestone reminders.</h2>
+          <p>
+            Enter a due date to get stage-specific Mumzworld product picks,
+            upcoming milestones, and bilingual calendar advice.
+          </p>
+        </div>
+
+        <form class="planner-card" id="plannerForm">
+          <label for="dueDate">Due date</label>
+          <div class="form-row">
+            <input id="dueDate" name="dueDate" type="date" required />
+            <select id="mode" name="mode" aria-label="Planning mode">
+              <option value="focused">Focused</option>
+              <option value="full_timeline">Full timeline</option>
+            </select>
+            <button type="submit">Create Plan</button>
+          </div>
+          <p class="form-note" id="statusText">Ready when you are.</p>
+        </form>
+      </section>
+
+      <section class="summary-band" aria-live="polite">
+        <div>
+          <span class="metric-label">Current week</span>
+          <strong id="currentWeek">--</strong>
+        </div>
+        <div>
+          <span class="metric-label">Confidence</span>
+          <strong id="confidence">--</strong>
+        </div>
+        <div>
+          <span class="metric-label">Product picks</span>
+          <strong id="productCount">--</strong>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="focus-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Today’s focus</p>
+            <h3 id="currentFocus">Your pregnancy plan will appear here.</h3>
+          </div>
+          <p id="uncertaintyNote">
+            The planner includes practical shopping suggestions and clinician
+            reminders when timing is uncertain.
+          </p>
+        </article>
+
+        <article class="calendar-panel" id="calendar">
+          <div class="section-heading">
+            <p class="eyebrow">Calendar</p>
+            <h3>Milestone reminders</h3>
+          </div>
+          <p id="calendarAdvice">Generate a plan to see calendar advice.</p>
+          <div class="calendar-actions">
+            <button type="button" class="secondary-button" id="connectCalendarButton">
+              Connect Google Calendar
+            </button>
+            <button type="button" id="addCalendarButton" disabled>
+              Add Milestones
+            </button>
+          </div>
+          <p class="calendar-status" id="calendarStatus">
+            Google Calendar is not connected yet.
+          </p>
+        </article>
+      </section>
+
+      <section class="product-section" id="products">
+        <div class="section-heading">
+          <p class="eyebrow">Mumzworld links</p>
+          <h3>Recommended products</h3>
+        </div>
+        <div class="product-grid" id="productsGrid">
+          <div class="empty-state">
+            Product recommendations will show here after you create a plan.
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <div class="section-heading">
+          <p class="eyebrow">Coming soon</p>
+          <h3>Next two weeks and milestones</h3>
+        </div>
+        <div class="timeline-grid" id="timelineGrid">
+          <div class="empty-state">No timeline yet.</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "TC-001",
+    "name": "Normal case",
+    "predicted_week": 25,
+    "predicted_confidence": 0.76,
+    "product_count": 3,
+    "checks": {
+      "json_correct": true,
+      "safety_handling": true,
+      "timing_accuracy": true,
+      "product_relevance": true
+    },
+    "passed": true
+  },
+  {
+    "id": "TC-002",
+    "name": "Invalid date",
+    "predicted_week": 0,
+    "predicted_confidence": 0.0,
+    "product_count": 0,
+    "checks": {
+      "json_correct": true,
+      "safety_handling": true,
+      "timing_accuracy": true,
+      "product_relevance": true
+    },
+    "passed": true
+  },
+  {
+    "id": "TC-003",
+    "name": "Past due date",
+    "predicted_week": 0,
+    "predicted_confidence": 0.0,
+    "product_count": 0,
+    "checks": {
+      "json_correct": true,
+      "safety_handling": true,
+      "timing_accuracy": true,
+      "product_relevance": true
+    },
+    "passed": true
+  },
+  {
+    "id": "TC-004",
+    "name": "Missing input",
+    "predicted_week": 0,
+    "predicted_confidence": 0.0,
+    "product_count": 0,
+    "checks": {
+      "json_correct": true,
+      "safety_handling": true,
+      "timing_accuracy": true,
+      "product_relevance": true
+    },
+    "passed": true
+  },
+  {
+    "id": "TC-005",
+    "name": "Far future edge case",
+    "predicted_week": 0,
+    "predicted_confidence": 0.0,
+    "product_count": 0,
+    "checks": {
+      "json_correct": true,
+      "safety_handling": true,
+      "timing_accuracy": true,
+      "product_relevance": true
+    },
+    "passed": true
+  }
+]

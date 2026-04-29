@@ -1,0 +1,162 @@
+[
+  {
+    "start_week": 1,
+    "end_week": 12,
+    "focus_en": "Build early-pregnancy basics and symptom comfort.",
+    "focus_ar": "جهزي أساسيات بداية الحمل ودعم الراحة مع الأعراض.",
+    "products": [
+      {
+        "name": "Prenatal vitamins",
+        "url": "https://www.mumzworld.com/en/prenatal-vitamins",
+        "timing": "Buy now",
+        "base_reason_en": "Supports routine prenatal nutrition early in pregnancy.",
+        "base_reason_ar": "يدعم الاحتياجات الغذائية الأساسية في بداية الحمل."
+      },
+      {
+        "name": "Hydration bottle",
+        "url": "https://www.mumzworld.com/en/hydration-bottle",
+        "timing": "Buy now",
+        "base_reason_en": "Helps maintain consistent hydration during nausea and fatigue.",
+        "base_reason_ar": "يساعد على الحفاظ على الترطيب المنتظم مع الغثيان والتعب."
+      }
+    ]
+  },
+  {
+    "start_week": 13,
+    "end_week": 20,
+    "focus_en": "Improve day-to-day comfort and prepare for visible body changes.",
+    "focus_ar": "حسني الراحة اليومية واستعدي لتغيرات الجسم الواضحة.",
+    "products": [
+      {
+        "name": "Maternity wear",
+        "url": "https://www.mumzworld.com/en/maternity-wear",
+        "timing": "Buy this stage",
+        "base_reason_en": "Makes growing-bump comfort easier as everyday clothes start to feel restrictive.",
+        "base_reason_ar": "يسهل الراحة مع نمو البطن عندما تبدأ الملابس اليومية بالشعور بالضيق."
+      },
+      {
+        "name": "Supportive maternity bra",
+        "url": "https://www.mumzworld.com/en/maternity-bra",
+        "timing": "Buy this stage",
+        "base_reason_en": "Adds comfort as breast size and sensitivity increase.",
+        "base_reason_ar": "يوفر راحة إضافية مع زيادة الحجم والحساسية."
+      }
+    ]
+  },
+  {
+    "start_week": 21,
+    "end_week": 27,
+    "focus_en": "Reduce sleep strain and support mobility as the bump gets heavier.",
+    "focus_ar": "خففي ضغط النوم وادعمي الحركة مع زيادة وزن البطن.",
+    "products": [
+      {
+        "name": "Maternity pillow",
+        "url": "https://www.mumzworld.com/en/maternity-pillow",
+        "timing": "Buy now",
+        "base_reason_en": "Supports sleep posture and lower-back comfort in the mid-second trimester.",
+        "base_reason_ar": "يدعم وضعية النوم وراحة أسفل الظهر في منتصف الثلث الثاني."
+      },
+      {
+        "name": "Loose clothing",
+        "url": "https://www.mumzworld.com/en/maternity-loose-clothing",
+        "timing": "Buy now",
+        "base_reason_en": "Keeps daily movement more comfortable as the abdomen expands.",
+        "base_reason_ar": "يجعل الحركة اليومية أكثر راحة مع اتساع البطن."
+      },
+      {
+        "name": "Compression socks",
+        "url": "https://www.mumzworld.com/en/maternity-compression-socks",
+        "timing": "Consider this stage",
+        "base_reason_en": "Can help with leg fatigue during longer standing or travel days.",
+        "base_reason_ar": "قد تساعد في تخفيف تعب الساقين خلال الوقوف الطويل أو السفر."
+      }
+    ]
+  },
+  {
+    "start_week": 28,
+    "end_week": 31,
+    "focus_en": "Start third-trimester home prep and begin baby essentials shopping.",
+    "focus_ar": "ابدئي تجهيز المنزل في الثلث الثالث وشراء أساسيات الطفل.",
+    "products": [
+      {
+        "name": "Baby clothes",
+        "url": "https://www.mumzworld.com/en/baby-clothes",
+        "timing": "Buy now",
+        "base_reason_en": "Useful to start sizing and washing newborn basics before the final month.",
+        "base_reason_ar": "مفيد لبدء تجهيز وغسل أساسيات المولود قبل الشهر الأخير."
+      },
+      {
+        "name": "Diapers",
+        "url": "https://www.mumzworld.com/en/diapers",
+        "timing": "Buy now",
+        "base_reason_en": "Helps avoid last-minute shopping pressure closer to delivery.",
+        "base_reason_ar": "يساعد على تجنب ضغط الشراء في اللحظات الأخيرة قرب الولادة."
+      },
+      {
+        "name": "Changing mat",
+        "url": "https://www.mumzworld.com/en/changing-mat",
+        "timing": "Buy this stage",
+        "base_reason_en": "Supports early nursery setup while there is still time to organize.",
+        "base_reason_ar": "يدعم تجهيز مساحة تغيير الحفاضات بينما لا يزال هناك وقت للترتيب."
+      }
+    ]
+  },
+  {
+    "start_week": 32,
+    "end_week": 35,
+    "focus_en": "Finish newborn setup and review feeding, transport, and sleep essentials.",
+    "focus_ar": "أكملي تجهيزات المولود وراجعي أساسيات الرضاعة والتنقل والنوم.",
+    "products": [
+      {
+        "name": "Breast pump",
+        "url": "https://www.mumzworld.com/en/breast-pump",
+        "timing": "Buy this stage",
+        "base_reason_en": "Helpful if you want feeding flexibility and prefer not to decide under time pressure after birth.",
+        "base_reason_ar": "مفيد إذا كنت ترغبين بمرونة في الرضاعة ولا تودين اتخاذ القرار تحت ضغط بعد الولادة."
+      },
+      {
+        "name": "Infant car seat",
+        "url": "https://www.mumzworld.com/en/infant-car-seat",
+        "timing": "Buy now",
+        "base_reason_en": "A key transport essential that is better sorted before the final weeks.",
+        "base_reason_ar": "من أساسيات التنقل المهمة ومن الأفضل حسمه قبل الأسابيع الأخيرة."
+      },
+      {
+        "name": "Crib sheets",
+        "url": "https://www.mumzworld.com/en/crib-sheets",
+        "timing": "Buy this stage",
+        "base_reason_en": "Useful for finalizing the sleeping setup before the baby arrives.",
+        "base_reason_ar": "مفيدة لإكمال تجهيز مكان نوم الطفل قبل وصوله."
+      }
+    ]
+  },
+  {
+    "start_week": 36,
+    "end_week": 40,
+    "focus_en": "Prioritize hospital readiness, postpartum comfort, and the final must-haves.",
+    "focus_ar": "ركزي على جاهزية المستشفى وراحة ما بعد الولادة والاحتياجات الأخيرة.",
+    "products": [
+      {
+        "name": "Hospital bag kit",
+        "url": "https://www.mumzworld.com/en/hospital-bag-kit",
+        "timing": "Buy now",
+        "base_reason_en": "Reduces stress if labor starts earlier than expected.",
+        "base_reason_ar": "يخفف التوتر إذا بدأت الولادة أبكر من المتوقع."
+      },
+      {
+        "name": "Baby blanket",
+        "url": "https://www.mumzworld.com/en/baby-blanket",
+        "timing": "Buy now",
+        "base_reason_en": "Useful for discharge, transport, and the first days at home.",
+        "base_reason_ar": "مفيد للخروج من المستشفى والتنقل والأيام الأولى في المنزل."
+      },
+      {
+        "name": "Postpartum care kit",
+        "url": "https://www.mumzworld.com/en/postpartum-care-kit",
+        "timing": "Buy now",
+        "base_reason_en": "Helps you avoid leaving recovery supplies to the final moment.",
+        "base_reason_ar": "يساعدك على عدم تأجيل مستلزمات التعافي إلى اللحظة الأخيرة."
+      }
+    ]
+  }
+]
