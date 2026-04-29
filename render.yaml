@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: dueday-companion
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PREGNANCY_LLM_MODEL
+        value: groq/llama3-70b-8192
+      - key: GOOGLE_CALENDAR_REDIRECT_URI
+        sync: false
