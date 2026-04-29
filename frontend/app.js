@@ -30,7 +30,8 @@ function showCalendarCallbackMessage() {
     return;
   }
   if (params.get("calendar") === "connected") {
-    calendarStatus.textContent = "Google Calendar connected. You can add milestone reminders.";
+    calendarStatus.textContent = "Google Calendar connected. Adding milestones...";
+    autoAddPendingEvents();
   }
 }
 
@@ -129,7 +130,7 @@ function renderPlan(data) {
   currentFocus.textContent = data.current_focus || "Plan generated.";
   uncertaintyNote.textContent = data.uncertainty_note || "";
   calendarAdvice.textContent = data.calendar_advice || "No calendar advice returned.";
-  addCalendarButton.disabled = !calendarConnected || latestCalendarEvents.length === 0;
+  addCalendarButton.disabled = latestCalendarEvents.length === 0;
   renderProducts(data.products || []);
   renderTimeline(data.next_2_weeks_preview || [], data.milestones || []);
   renderFullTimeline(data.full_timeline || null);
@@ -153,7 +154,7 @@ async function refreshCalendarStatus() {
       ? "Google Calendar connected. You can add milestone reminders."
       : "Connect Google Calendar before adding milestone reminders.";
     connectCalendarButton.disabled = calendarConnected;
-    addCalendarButton.disabled = !calendarConnected || latestCalendarEvents.length === 0;
+    addCalendarButton.disabled = latestCalendarEvents.length === 0;
   } catch (error) {
     calendarStatus.textContent = "Unable to check Google Calendar connection.";
   }
@@ -209,12 +210,31 @@ addCalendarButton.addEventListener("click", async () => {
     return;
   }
 
-  const approved = window.confirm(
-    `This will create ${latestCalendarEvents.length} all-day milestone event(s) in your primary Google Calendar. The event titles, dates, and descriptions will be sent to Google Calendar. Continue?`,
-  );
-  if (!approved) {
+  // If not connected, save events and start OAuth
+  if (!calendarConnected) {
+    localStorage.setItem("pendingCalendarEvents", JSON.stringify(latestCalendarEvents));
+    calendarStatus.textContent = "Connecting to Google Calendar...";
+    try {
+      const response = await fetch("/google-calendar/auth");
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.detail || "Google Calendar is not configured.");
+      }
+      window.location.href = data.authorization_url;
+    } catch (error) {
+      calendarStatus.textContent = error.message || "Unable to start Google OAuth.";
+    }
     return;
   }
+
+  await sendCalendarEvents(latestCalendarEvents);
+});
+
+async function sendCalendarEvents(events) {
+  const approved = window.confirm(
+    `This will create ${events.length} all-day milestone event(s) in your primary Google Calendar. Continue?`,
+  );
+  if (!approved) return;
 
   addCalendarButton.disabled = true;
   calendarStatus.textContent = "Adding milestone reminders to Google Calendar...";
@@ -223,7 +243,7 @@ addCalendarButton.addEventListener("click", async () => {
     const response = await fetch("/google-calendar/events", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ events: latestCalendarEvents }),
+      body: JSON.stringify({ events }),
     });
     const data = await response.json();
     if (!response.ok) {
@@ -234,8 +254,23 @@ addCalendarButton.addEventListener("click", async () => {
     calendarStatus.textContent =
       error.message || "Unable to create Google Calendar events.";
   } finally {
-    addCalendarButton.disabled = !calendarConnected || latestCalendarEvents.length === 0;
+    addCalendarButton.disabled = latestCalendarEvents.length === 0;
   }
-});
+}
+
+async function autoAddPendingEvents() {
+  const pending = localStorage.getItem("pendingCalendarEvents");
+  if (!pending) return;
+  localStorage.removeItem("pendingCalendarEvents");
+  try {
+    const events = JSON.parse(pending);
+    if (events.length) {
+      latestCalendarEvents = events;
+      await sendCalendarEvents(events);
+    }
+  } catch (e) {
+    calendarStatus.textContent = "Failed to add pending milestones.";
+  }
+}
 
 refreshCalendarStatus().then(showCalendarCallbackMessage);
