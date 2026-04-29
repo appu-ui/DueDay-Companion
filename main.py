@@ -59,6 +59,46 @@ async def frontend() -> FileResponse:
     return FileResponse(FRONTEND_DIR / "index.html")
 
 
+@app.get("/privacy", include_in_schema=False)
+async def privacy_policy():
+    from fastapi.responses import HTMLResponse
+    return HTMLResponse("""<!doctype html><html><head><title>Privacy Policy - DueDay Companion</title>
+    <style>body{font-family:system-ui;max-width:700px;margin:40px auto;padding:0 20px;color:#333;line-height:1.7}</style></head><body>
+    <h1>Privacy Policy</h1><p><strong>Last updated:</strong> April 2026</p>
+    <p>DueDay Companion is a pregnancy planning tool. We respect your privacy.</p>
+    <h2>Data We Collect</h2>
+    <ul><li><strong>Due date</strong> you enter to generate your plan (not stored permanently)</li>
+    <li><strong>Google Calendar access</strong> (only if you connect it) to add milestone reminders</li></ul>
+    <h2>What We Don't Do</h2>
+    <ul><li>We do not sell your data</li><li>We do not store personal health information</li>
+    <li>We do not share data with third parties beyond Google Calendar (at your request)</li></ul>
+    <h2>Google Calendar</h2>
+    <p>If you connect Google Calendar, we only create milestone reminder events. We do not read, modify, or delete your existing events.</p>
+    <h2>Contact</h2><p>For questions, open an issue at
+    <a href="https://github.com/appu-ui/DueDay-Companion">github.com/appu-ui/DueDay-Companion</a></p>
+    </body></html>""")
+
+
+@app.get("/terms", include_in_schema=False)
+async def terms_of_service():
+    from fastapi.responses import HTMLResponse
+    return HTMLResponse("""<!doctype html><html><head><title>Terms of Service - DueDay Companion</title>
+    <style>body{font-family:system-ui;max-width:700px;margin:40px auto;padding:0 20px;color:#333;line-height:1.7}</style></head><body>
+    <h1>Terms of Service</h1><p><strong>Last updated:</strong> April 2026</p>
+    <h2>Acceptance</h2><p>By using DueDay Companion, you agree to these terms.</p>
+    <h2>Service Description</h2><p>DueDay Companion provides AI-generated pregnancy product recommendations and milestone reminders.
+    It is not a medical service and does not provide medical advice.</p>
+    <h2>Disclaimer</h2>
+    <ul><li>This tool is for <strong>informational purposes only</strong></li>
+    <li>Always consult your doctor for medical decisions</li>
+    <li>Product recommendations are suggestions, not prescriptions</li></ul>
+    <h2>Limitation of Liability</h2>
+    <p>DueDay Companion is provided "as is" without warranties. We are not liable for any decisions made based on the tool's output.</p>
+    <h2>Contact</h2><p>For questions, open an issue at
+    <a href="https://github.com/appu-ui/DueDay-Companion">github.com/appu-ui/DueDay-Companion</a></p>
+    </body></html>""")
+
+
 @app.get("/google-calendar/status")
 def google_calendar_status() -> dict:
     return google_calendar.redact_status()
