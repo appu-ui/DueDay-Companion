@@ -230,5 +230,4 @@ I handle uncertainty by introducing confidence scores and explicit fallbacks. If
 - **LLaMA 3.3 70B (via Groq)**: Used as the core LLM for all agents due to its blazing fast inference and strong instruction-following capabilities.
 
 **AI Assistants & Tools:**
-- **Cursor / GitHub Copilot**: Used for rapid prototyping of the frontend and boilerplate generation.
 - **DeepMind Antigravity / Gemini 3.1 Pro**: Used to assist in refining agent prompts, structuring the FastAPI backend, and evaluating the multi-agent workflow.
