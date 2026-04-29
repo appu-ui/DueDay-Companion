@@ -15,7 +15,7 @@ load_dotenv()
 
 
 _llm = LLM(
-    model=os.getenv("PREGNANCY_LLM_MODEL", "groq/llama3-70b-8192"),
+    model=os.getenv("PREGNANCY_LLM_MODEL", "groq/llama-3.3-70b-versatile"),
     api_key=os.getenv("GROQ_API_KEY"),
     temperature=0.2,
 )
